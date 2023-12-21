@@ -48,8 +48,10 @@ class PublicKeyProvider implements KeyProvider<PrivateKey> {
 }
 ```
 
-> [!INFO]
+> [!IMPORTANT]
 > use the private key to sign the token and the public key to parse it
+
+> [!IMPORTANT]
 > in the case of encryption, you must use a public key for encryption and a private key for decryption
 
 ### start
@@ -60,8 +62,8 @@ public static void main(String[] args) {
     var keyFactory = new PrivateKeyFactory(publicKeyRepository);
     var keyProvider = new PublicKeyProvider(publicKeyRepository);
     var keyLocator = new JwsKeyLocator(keyProvider);
-    var serializer = new JwsSerializer(keyFactory);             //use for sign token
-    var deserializer = new SkinnyJwsDeserializer(keyLocator);   //use for parse token
+    var serializer = new JwsSerializer(keyFactory);             //use to sign token
+    var deserializer = new SkinnyJwsDeserializer(keyLocator);   //use to parse token
     var issuedAt = Instant.now();
     var token = SkinnyJwt.builder()
             .tokenId(UUID.randomUUID().toString())
