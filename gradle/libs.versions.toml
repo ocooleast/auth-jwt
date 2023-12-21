@@ -1,0 +1,9 @@
+[versions]
+jjwk = "0.12.3"
+lombok = "1.18.30"
+
+[libraries]
+jjwk-api = { group = "io.jsonwebtoken", name = "jjwt-api", version.ref = "jjwk"}
+jjwk-jackson = { group = "io.jsonwebtoken", name = "jjwt-jackson", version.ref = "jjwk"}
+jjwk-impl = { group = "io.jsonwebtoken", name = "jjwt-impl", version.ref = "jjwk"}
+lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok"}
