@@ -1,5 +1,5 @@
-name: Build
-on: push
+name: build
+on: pull_request
 jobs:
   gradle:
     runs-on: macos-latest
