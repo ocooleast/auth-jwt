@@ -23,3 +23,10 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+tasks.jacocoTestReport {
+    reports {
+        csv.required = true
+        html.required = false
+    }
+}
