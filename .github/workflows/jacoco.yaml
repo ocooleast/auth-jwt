@@ -1,4 +1,4 @@
-name: jacoco report
+name: tests
 on: push
 jobs:
   tests:
@@ -24,5 +24,5 @@ jobs:
         with:
           jacoco-csv-file: build/reports/jacoco/test/jacocoTestReport.csv
           badges-directory: .github/badges
+          coverage-badge-filename: coverage.svg
           generate-coverage-badge: true
-          coverage-badge-filename: jacoco.svg
