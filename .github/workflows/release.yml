@@ -1,0 +1,22 @@
+name: release
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  build:
+    name: create release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.access_token }}
+        with:
+          tag_name: v0.0.1
+          release_name: v0.0.1
+          draft: false
+          prerelease: false
