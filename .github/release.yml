@@ -1,0 +1,9 @@
+changelog:
+  categories:
+    - title: 📎 features
+      labels:
+        - 'added abstraction for generating and retrieving keys'
+        - 'added jwt serializers'
+        - 'added skinny tokens'
+        - 'added skinny jwt deserializers'
+        - 'added guide'
