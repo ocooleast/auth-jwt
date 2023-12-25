@@ -1,5 +1,9 @@
 name: build
-on: pull_request
+on:
+  pull_request:
+  push:
+    branches:
+      - 'dev'
 jobs:
   gradle:
     runs-on: ubuntu-latest
